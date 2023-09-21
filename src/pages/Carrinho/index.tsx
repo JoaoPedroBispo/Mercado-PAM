@@ -6,7 +6,9 @@ import {
   Text,
   View,
   TouchableOpacity,
+  TextInput,
 } from "react-native";
+import Entypo from 'react-native-vector-icons/Entypo';
 import topo from "../../../assets/topo.png";
 import logo from "../../../assets/logo.png";
 import abacate from "../../../assets/abacate.png";
@@ -32,6 +34,11 @@ export default function Carrinho() {
         <Text style={estilos.subtitulo}>
           Com a qualidade e e preço baixo que voçê precisa.
         </Text>
+
+        <View style={estilos.divPesquisa}>
+        <Entypo name="magnifying-glass" size={30} color="#900" />
+          <TextInput style={estilos.inputPesquisa} placeholder="Buscar" />
+        </View>
 
         <TouchableOpacity>
           <View style={estilos.divProduto}>
@@ -183,4 +190,16 @@ const estilos = StyleSheet.create({
     flexDirection: "row",
     marginTop: 15,
   },
+
+  divPesquisa: {
+    backgroundColor: "#dddddd",
+    borderRadius: 5,
+    height: 35,
+    justifyContent: "center"
+  },
+
+  inputPesquisa: {
+    left: 10,
+    fontSize: 18
+  }
 });

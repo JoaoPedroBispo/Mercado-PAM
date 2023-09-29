@@ -36,7 +36,7 @@ export default function Carrinho() {
         </Text>
 
         <View style={estilos.divPesquisa}>
-        <Entypo name="magnifying-glass" size={30} color="#900" />
+        <Entypo style={estilos.iconPesquisa} name="magnifying-glass" size={25} color="#900" />
           <TextInput style={estilos.inputPesquisa} placeholder="Buscar" />
         </View>
 
@@ -191,11 +191,17 @@ const estilos = StyleSheet.create({
     marginTop: 15,
   },
 
+  iconPesquisa:{
+    top: 4,
+    left: 5
+  },
+
   divPesquisa: {
     backgroundColor: "#dddddd",
     borderRadius: 5,
     height: 35,
-    justifyContent: "center"
+    flexDirection: "row",
+    
   },
 
   inputPesquisa: {
